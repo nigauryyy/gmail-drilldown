@@ -1,4 +1,4 @@
-(function() {
+javascript:(function() {
   var labels = (function() {
     var elems = document.querySelectorAll("div.ar.as > div.at");
     var hash_labels = {}
