@@ -28,9 +28,10 @@
 
   var filter_label = function(title, value) {
     var escape_title = title.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+
     var a = document.createElement("a");
 
-    a.href = location.hash + encodeURIComponent(" l:" + title);
+    a.href = location.hash + encodeURIComponent(" l:" + (title=="受信トレイ"?"inbox":title));
     a.innerHTML = escape_title + " (" + value + ")";
     return a;
   }
