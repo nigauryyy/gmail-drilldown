@@ -33,6 +33,7 @@
 
     a.href = location.hash + encodeURIComponent(" l:" + (title=="受信トレイ"?"inbox":title));
     a.innerHTML = escape_title + " (" + value + ")";
+    a.style = "margin:0 5px"
     return a;
   }
 
