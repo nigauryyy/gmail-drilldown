@@ -37,6 +37,11 @@
     return a;
   }
 
+  var old_hrefs = document.querySelectorAll("#gbqfw > a");
+  for (var i = 0; i < old_hrefs.length; i++){
+    old_hrefs[i].remove();
+  }
+
   var base = document.querySelector("#gbqfw");
   for (var i = 0; i < labels.length; i++) {
     base.appendChild(filter_label(labels[i].title, labels[i].value));
