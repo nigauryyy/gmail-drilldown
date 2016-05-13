@@ -31,7 +31,7 @@
 
     var a = document.createElement("a");
 
-    a.href = location.hash + encodeURIComponent(" l:" + (title=="受信トレイ"?"inbox":title));
+    a.href = location.hash + encodeURIComponent(" l:" + (title=="受信トレイ"?"inbox":title.replace(/ /g, "-")));
     a.innerHTML = escape_title + " (" + value + ")";
     a.style = "margin:0 5px"
     return a;
